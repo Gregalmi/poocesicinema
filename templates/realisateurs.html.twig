@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{titleFromController}}{% endblock %}
+
+{% block body %}
+
+<table>
+<thead>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Prenom</th>
+</thead>
+<tbody>
+    {% for realisateur in realisateurs %}
+        <tr>
+            <td>{{realisateur.id}}</td>
+            <td>{{realisateur.nom}}</td>
+            <td>{{realisateur.prenom}}</td>
+            {#<td>{{realisateur.films}}</td>#}
+        </tr>  
+    {% endfor %}
+</tbody>
+</table>
+
+{% endblock %}

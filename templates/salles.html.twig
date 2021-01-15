@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{titleFromController}}{% endblock %}
+
+{% block body %}
+
+<table>
+<thead>
+    <th>Id</th>
+    <th>Nom de la salle</th>
+</thead>
+<tbody>
+    {% for salle in salles %}
+        <tr>
+            <td>{{salle.id}}</td>
+            <td>{{salle.nom}}</td>
+        </tr>  
+    {% endfor %}
+</tbody>
+</table>
+
+{% endblock %}
